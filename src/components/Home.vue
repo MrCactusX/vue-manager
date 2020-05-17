@@ -4,7 +4,7 @@
  * @Author: Mr.Cactus
  * @Date: 2020-05-12 22:39:39
  * @LastEditors: Mr.Cactus
- * @LastEditTime: 2020-05-13 17:23:22
+ * @LastEditTime: 2020-05-17 10:38:33
  -->
 <template>
   <el-container class="home_container">
@@ -14,7 +14,7 @@
         <img src="../assets/logo.png" alt="">
         <span>电商后台管理系统</span>
       </div>
-      <el-button type="info">退出</el-button>
+      <el-button type="info" @click="exit">退出</el-button>
     </el-header>
     <!--页面主题区域-->
     <el-container>
@@ -87,6 +87,13 @@ export default {
       this.activeIndex = activeIndex;
       //   存储选中选项
       window.sessionStorage.setItem('activeIndex', activeIndex);
+    },
+    // 退出登录
+    exit() {
+      // 保存token值
+      window.sessionStorage.removeItem('token');
+      // 通过编程式导航跳转到登录
+      this.$router.push('/login')
     }
 
   }

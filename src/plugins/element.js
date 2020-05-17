@@ -4,7 +4,7 @@
  * @Author: Mr.Cactus
  * @Date: 2020-05-12 20:03:43
  * @LastEditors: Mr.Cactus
- * @LastEditTime: 2020-05-13 23:12:50
+ * @LastEditTime: 2020-05-17 11:40:38
  */
 import Vue from 'vue'
 import {
@@ -12,7 +12,8 @@ import {
 	FormItem,
 	Input,
 	Button,
-	Message,
+    Message,
+    MessageBox,
 	Container,
 	Header,
 	Aside,
@@ -32,6 +33,10 @@ import {
     Pagination,
     Tooltip,
     Dialog,
+    Tag,
+    Tree, 
+    Cascader
+
 } from 'element-ui'
 
 Vue.use(Form)
@@ -57,4 +62,8 @@ Vue.use(Switch)
 Vue.use(Pagination)
 Vue.use(Tooltip)
 Vue.use(Dialog)
+Vue.use(Tag)
+Vue.use(Tree)
+Vue.use(Cascader)
 Vue.prototype.$message = Message
+Vue.prototype.$confirm = MessageBox.confirm

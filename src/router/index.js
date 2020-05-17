@@ -1,9 +1,23 @@
+/*
+ * @Descripttion: 
+ * @version: 
+ * @Author: Mr.Cactus
+ * @Date: 2020-05-11 16:04:14
+ * @LastEditors: Mr.Cactus
+ * @LastEditTime: 2020-05-17 20:31:00
+ */ 
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Welcome from '../components/welcome.vue'
 import Login from '../components/login.vue'
 import Home from '../components/Home.vue'
+import Welcome from '../components/welcome.vue'
 import Users from '../components/users/Users.vue'
+import Rights from '../components/power/Rights.vue'
+import Roles from '../components/power/Roles.vue'
+import Goods from '../components/goods/Goods.vue'
+import Params from '../components/goods/Params.vue'
+import GCate from '../components/goods/Cate.vue'
+import Order from '../components/order/Order.vue'
 
 Vue.use(VueRouter)
 const router = new VueRouter({
@@ -19,14 +33,40 @@ const router = new VueRouter({
 		{
 			path: '/home',
 			component: Home,
-			children: [
+			redirect: '/welcome',
+			children: [{
+					path: '/welcome',
+					component: Welcome
+				},
+				{
+					path: '/users',
+					component: Users
+				},
+				{
+					path: '/rights',
+					component: Rights
+				},
+				{
+					path: '/roles',
+					component: Roles
+				},
                 {
-                    path:'/home',
-                    component: Welcome
-                },{
-				path: '/users',
-				component: Users
-			}]
+					path: '/goods',
+					component: Goods
+                },
+                {
+					path: '/params',
+					component: Params
+                },
+                {
+					path: '/categories',
+					component: GCate
+                },
+                {
+					path: '/orders',
+					component: Order
+				}
+			]
 		}
 
 	]

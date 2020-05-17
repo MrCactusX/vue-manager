@@ -1,3 +1,11 @@
+/*
+ * @Descripttion: 
+ * @version: 
+ * @Author: Mr.Cactus
+ * @Date: 2020-05-11 16:04:14
+ * @LastEditors: Mr.Cactus
+ * @LastEditTime: 2020-05-17 11:38:38
+ */ 
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router/index.js'
@@ -6,6 +14,9 @@ import './plugins/element.js'
 import './assets/global.less'
 // 导入图标样式
 import './assets/fonts/iconfont.css'
+// 导入table表格插件
+import ZkTable from 'vue-table-with-tree-grid'
+Vue.use(ZkTable)
 
 // 导入axios
 import axios from 'axios'
