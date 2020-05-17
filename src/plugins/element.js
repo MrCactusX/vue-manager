@@ -4,7 +4,7 @@
  * @Author: Mr.Cactus
  * @Date: 2020-05-12 20:03:43
  * @LastEditors: Mr.Cactus
- * @LastEditTime: 2020-05-17 11:40:38
+ * @LastEditTime: 2020-05-17 22:04:21
  */
 import Vue from 'vue'
 import {
@@ -35,7 +35,8 @@ import {
     Dialog,
     Tag,
     Tree, 
-    Cascader
+    Cascader,
+    Alert
 
 } from 'element-ui'
 
@@ -65,5 +66,6 @@ Vue.use(Dialog)
 Vue.use(Tag)
 Vue.use(Tree)
 Vue.use(Cascader)
+Vue.use(Alert)
 Vue.prototype.$message = Message
 Vue.prototype.$confirm = MessageBox.confirm
